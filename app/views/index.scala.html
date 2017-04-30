@@ -1,0 +1,23 @@
+@*
+ * This template takes a single argument, a String containing a
+ * message to display.
+ *@
+@(students: List[Students])
+
+@*
+ * Call the `main` template with two arguments. The first
+ * argument is a `String` with the title of the page, the second
+ * argument is an `Html` object containing the body of the page.
+ *@
+@main("Welcome to Play") {
+
+    @students.map { student =>
+
+        <p>Name : @student.name</p>
+        <p>Stream : @student.stream</p>
+        <p>Section : @student.section</p>
+        <p>Email : @student.email</p>
+
+    }
+
+}
